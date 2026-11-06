@@ -5,6 +5,7 @@ description = "USB/IP device framing and Sebas Microphone, a USB Audio Class 1.0
 authors = ["KDOT <king@kdot.zip>"]
 license = "MIT OR Apache-2.0"
 homepage = "https://sebas.zip"
+repository = "https://github.com/sebas-dot-zip/sebas-virtual-usb-device"
 readme = "README.md"
 keywords = ["usb", "usbip", "uac", "microphone", "audio"]
 categories = ["hardware-support", "multimedia::audio"]
