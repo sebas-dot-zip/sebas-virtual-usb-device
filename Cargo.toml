@@ -1,0 +1,26 @@
+[package]
+name = "sebas-virtual-usb-device"
+version = "0.1.0"
+description = "USB/IP device framing and Sebas Microphone, a USB Audio Class 1.0 microphone emulated over USB/IP"
+authors = ["KDOT <king@kdot.zip>"]
+license = "MIT OR Apache-2.0"
+homepage = "https://sebas.zip"
+readme = "README.md"
+keywords = ["usb", "usbip", "uac", "microphone", "audio"]
+categories = ["hardware-support", "multimedia::audio"]
+edition = "2024"
+rust-version = "1.89"
+publish = false
+
+[lib]
+name = "sebas_virtual_usb_device"
+
+[features]
+# In-memory USB/IP helpers for tests of devices built on this crate.
+test-support = []
+
+[dependencies]
+# Only `sync`: the reply queue of the USB/IP import holding a device and the
+# microphone's in-use state.
+tokio = { version = "1", default-features = false, features = ["sync"] }
+tracing = { version = "0.1", default-features = false, features = ["std"] }
